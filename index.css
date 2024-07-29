@@ -6,6 +6,7 @@
 body{
     width: 100%;
     height: 100%;
+    background-image: url("farmer.jpg");
 }
 nav{
     width:100%;
@@ -14,10 +15,16 @@ nav{
 }
 .logo{
     font-size: 40px;
-    color:white;
     margin:0 100px;
     line-height: 80px;
 
+}
+.logo a{
+    text-decoration: none;
+    color:white;
+}
+.logo a:hover {
+    background-color: rgb(24, 154, 111) ;
 }
 ul{
     float:right;
@@ -27,12 +34,15 @@ ul li{
     display: inline-block;
     line-height: 80px;
 }
+ul li:hover {
+    cursor: pointer;
+}
 ul li a{
     padding:8px 20px;
     font-size: 20px;
 }
 ul li a.active , a:hover{
-    background-color:rgb(66, 161, 130);
+    background-color: #FF0000;
 }
 #check-button{
     float:right;
@@ -60,10 +70,16 @@ ul li a.active , a:hover{
     nav ul{
         width: 100%;
         height: 100vh;
-        background-color: bisque;
+        background-color: #C1C9C2;
         position: fixed;
         top:80px;
         left:-100%;
     }
     
+}
+.body{
+    background-image: url("farmer.jpg");
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 100vh;
 }
