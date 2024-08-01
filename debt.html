@@ -12,24 +12,24 @@
     <div class="text">
        Debt Calculator
     </div>
-    <form action="#">
+    <form action="" method="get">
        <div class="form-row">
-          <div class="input-data">
+          <div class="dataInput">
              <input type="number" required>
              <div class="underline"></div>
-             <label for="">Annual Income</label>
+             <label for="dataInput">Annual Income</label>
           </div>
-          <div class="input-data">
+          <div class="dataInput">
              <input type="number" required>
              <div class="underline"></div>
-             <label for="">Loan Amount</label>
+             <label for="dataInput">Loan Amount</label>
           </div>
        </div>
        <div class="form-row">
-          <div class="input-data">
+          <div class="dataInput">
              <input type="number" required>
              <div class="underline"></div>
-             <label for="">Time period</label>
+             <label for="dataInput">Time period in years</label>
           </div>
           <!-- <div class="input-data">
              <input type="text" required>
@@ -47,10 +47,31 @@
           <div class="form-row submit-btn">
              <div class="input-data">
                 <div class="inner"></div>
-                <input type="submit" value="submit">
+                <input type="submit" onclick="saveData()" value="submit">
              </div>
+          </div>
+          <div>
+            <h2>Saved Data:</h2>
+            <div id="savedData"></div>
           </div>
     </form>
     </div>
+    <script>
+      function saveData() {
+            const data = document
+                .getElementById('dataInput')
+                .value;
+            localStorage
+                .setItem('userData', data);
+            displayData();
+        }
+        function displayData() {
+            const savedData = localStorage
+                .getItem('userData');
+            document
+                .getElementById('savedData')
+                .innerText = savedData;
+        }
+    </script>
     </body>
     </html>

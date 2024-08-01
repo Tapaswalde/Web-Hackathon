@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<head>
+    <title>DEBT PREDICTOR</title>
+</head>
+
+<body>
+    <div>
+        <h1 
+            style="color: green;">DEBT PREDICTOR :</h1>
+        <h3>Enter some of your information</h3>
+        <label 
+            for="dataInput">Annual Income :</label>
+        <input
+            type="number"
+            id="Income">
+        <br><br>
+        <label 
+            for="dataInput">Loan Amount :</label>
+        <input
+            type="number"
+            id="Loan">
+        <br><br>
+        <label 
+            for="dataInput">Time Period :</label>
+        <input
+            type="number"
+            id="Time">
+        <br><br>
+        <button 
+          style="cursor: pointer;"  onclick="saveData()">Submit</button>
+    </div>
+    <div>
+        <h2>Saved Data:</h2>
+        <div id="savedData1"></div>
+        <div id="savedData2"></div>
+        <div id="savedData3"></div>
+    </div>
+    <script>
+        function saveData() {
+            const data1 = document
+                .getElementById('Income')
+                .value;
+            const data2 = document
+                .getElementById('Loan')
+                .value;
+            const data3 = document
+                .getElementById('Time')
+                .value;
+            localStorage
+                .setItem('Income', data1);
+            localStorage
+                .setItem('Loan', data2);
+            localStorage
+                .setItem('Time', data3);
+            displayData();
+        }
+        function displayData() {
+            const savedData1 = localStorage
+                .getItem('Income');
+            document
+                .getElementById('savedData1')
+                .innerText = savedData1;
+            const savedData2 = localStorage
+                .getItem('Loan');
+            document
+                .getElementById('savedData2')
+                .innerText = savedData2;
+            const savedData3 = localStorage
+                .getItem('Time');
+            document
+                .getElementById('savedData3')
+                .innerText = savedData3;
+        }
+        displayData();
+    </script>
+</body>
+
+</html>
