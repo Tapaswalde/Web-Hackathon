@@ -1,6 +1,8 @@
 body {
     font-family: "Oxygen", sans-serif;
     color: #050505;
+    background-image: url("farm\(6\).jpg");
+    
   }
   
   *,
@@ -148,7 +150,8 @@ body {
   .card_text p:last-child {
     margin: 0;
   }
-  .guide{
-    font-weight:750 ;
-
+  
+  .web{
+    text-decoration: none;
+    color:#c89b3f;
   }
