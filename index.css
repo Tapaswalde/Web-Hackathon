@@ -45,11 +45,13 @@ ul li:hover {
 ul li a{
     padding:8px 20px;
     font-size: 20px;
+    border-radius: 10px;
     text-decoration: none;
     color: black;
 }
 ul li a.active , a:hover{
-    background-color: #FF0000;
+    background-color: white;
+    color: darkgreen;
 }
 #check-button{
     float:right;
