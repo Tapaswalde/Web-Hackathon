@@ -15,19 +15,19 @@
     <form action="" method="get">
        <div class="form-row">
           <div class="dataInput">
-             <input type="number" required>
+             <input type="number" id="Income" required>
              <div class="underline"></div>
              <label for="dataInput">Annual Income</label>
           </div>
           <div class="dataInput">
-             <input type="number" required>
+             <input type="number" id="Loan" required>
              <div class="underline"></div>
              <label for="dataInput">Loan Amount</label>
           </div>
        </div>
        <div class="form-row">
           <div class="dataInput">
-             <input type="number" required>
+             <input type="number" id="Time" required>
              <div class="underline"></div>
              <label for="dataInput">Time period in years</label>
           </div>
@@ -52,26 +52,49 @@
           </div>
           <div>
             <h2>Saved Data:</h2>
-            <div id="savedData"></div>
+            <div id="savedData1"></div>
+            <div id="savedData2"></div>
+            <div id="savedData3"></div>
           </div>
     </form>
     </div>
     <script>
       function saveData() {
-            const data = document
-                .getElementById('dataInput')
+            const data1 = document
+                .getElementById('Income')
+                .value;
+            const data2 = document
+                .getElementById('Loan')
+                .value;
+            const data3 = document
+                .getElementById('Time')
                 .value;
             localStorage
-                .setItem('userData', data);
+                .setItem('Income', data1);
+            localStorage
+                .setItem('Loan', data2);
+            localStorage
+                .setItem('Time', data3);
             displayData();
         }
         function displayData() {
-            const savedData = localStorage
-                .getItem('userData');
+            const savedData1 = localStorage
+                .getItem('Income');
             document
-                .getElementById('savedData')
-                .innerText = savedData;
+                .getElementById('savedData1')
+                .innerText = savedData1;
+            const savedData2 = localStorage
+                .getItem('Loan');
+            document
+                .getElementById('savedData2')
+                .innerText = savedData2;
+            const savedData3 = localStorage
+                .getItem('Time');
+            document
+                .getElementById('savedData3')
+                .innerText = savedData3;
         }
+        displayData();
     </script>
     </body>
     </html>
