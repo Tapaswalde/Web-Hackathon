@@ -9,6 +9,9 @@
 </head>
 <body>
 <div class="container">
+    
+    <h2>Avdice:</h2>
+    <div id="savedData1"></div>
     <div class="text">
        Debt Calculator
     </div>
@@ -51,10 +54,6 @@
              </div>
           </div>
           <div>
-            <h2>Saved Data:</h2>
-            <div id="savedData1"></div>
-            <div id="savedData2"></div>
-            <div id="savedData3"></div>
           </div>
     </form>
     </div>
@@ -75,26 +74,37 @@
                 .setItem('Loan', data2);
             localStorage
                 .setItem('Time', data3);
+             
+                
+        oamount = Income*22.5/100;
+        otime = Time*12;
+        n = otime;
+        r = 10.75/100;
+        EMI = Loan * r * (1 + r)^n / ((1 + r)^n - 1);
+
             displayData();
         }
         function displayData() {
-            const savedData1 = localStorage
-                .getItem('Income');
-            document
+            const able = "you will be able to come out of debt";
+            const notable = "You may not be able to come out of debt";
+            oamount = Income*22.5/100;
+            otime = Time*12;
+        n = otime;
+        r = 10.75/100;
+        EMI = Loan * r * (1 + r)^n / ((1 + r)^n - 1);
+            if (oamount > EMI) {
+                document
                 .getElementById('savedData1')
-                .innerText = savedData1;
-            const savedData2 = localStorage
-                .getItem('Loan');
-            document
-                .getElementById('savedData2')
-                .innerText = savedData2;
-            const savedData3 = localStorage
-                .getItem('Time');
-            document
-                .getElementById('savedData3')
-                .innerText = savedData3;
+                .innerText = able;
+            }
+            else{
+                document
+                .getElementById('savedData1')
+                .innerText = notable;
+            }
         }
         displayData();
+
     </script>
     </body>
     </html>

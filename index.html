@@ -13,7 +13,7 @@
   <input type="checkbox" id="check" name="" value="">
   <label for="check" id="check-button"><i class="fa fa-bars"></i></label>
  <label class="logo"><a href="index.html">जागरक</a></label>
-  <ul>
+ <ul>
     <li><a href="/debt.html" style="color: darkgreen;" class="active"><b>Debt Predictor</b></a></li>
     <li><a href="/policies.html"><b>Gov policies</b></a></li>
     <li><a><b>Side Business</b></a></li>
@@ -23,7 +23,7 @@
 <div style="text-align: center; width: 100%; color: white; margin-top: 20px;" class="body">
   <h1><b>Working for the betterment of <span style="color: gold;">FINANCE</span></b></h1>
   <h1><b> of our <span style="color: green;">FARMERS</span>.</b></h1>
-  <a style="text-decoration: none;" href=""><button  style="background-color: green; margin-top: 100px; color: white; height: 40px; width: 100px; border: 2px solid white; box-shadow: 3px 3px 3px white; border-radius: 4px; cursor: pointer;">Explore ></button></a>
+  <a style="text-decoration: none;" href=""><button id="myBtn" style="background-color: green; margin-top: 100px; color: white; height: 40px; width: 100px; border: 2px solid white; box-shadow: 3px 3px 3px white; border-radius: 4px; cursor: pointer;">Explore ></button></a>
 </div>
 <h2 style="color: white; text-align: center;margin-top: 60px;"><b>Contents on our website</b></h2>
   <section style="margin-top: 70px;" class="articles">
@@ -70,6 +70,12 @@
     </article>
   </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
+  document.getElementById("myBtn").onclick = function() {myFunction()};
+
+function myFunction() {
+  document.getElementById("").classList.toggle("");
+}
+</script>
 </body>
 </html>
