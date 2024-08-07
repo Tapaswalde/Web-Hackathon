@@ -57,54 +57,6 @@
           </div>
     </form>
     </div>
-    <script>
-      function saveData() {
-            const data1 = document
-                .getElementById('Income')
-                .value;
-            const data2 = document
-                .getElementById('Loan')
-                .value;
-            const data3 = document
-                .getElementById('Time')
-                .value;
-            localStorage
-                .setItem('Income', data1);
-            localStorage
-                .setItem('Loan', data2);
-            localStorage
-                .setItem('Time', data3);
-             
-                
-        oamount = Income*22.5/100;
-        otime = Time*12;
-        n = otime;
-        r = 10.75/100;
-        EMI = Loan * r * (1 + r)^n / ((1 + r)^n - 1);
-
-            displayData();
-        }
-        function displayData() {
-            const able = "you will be able to come out of debt";
-            const notable = "You may not be able to come out of debt";
-            oamount = Income*22.5/100;
-            otime = Time*12;
-        n = otime;
-        r = 10.75/100;
-        EMI = Loan * r * (1 + r)^n / ((1 + r)^n - 1);
-            if (oamount > EMI) {
-                document
-                .getElementById('savedData1')
-                .innerText = able;
-            }
-            else{
-                document
-                .getElementById('savedData1')
-                .innerText = notable;
-            }
-        }
-        displayData();
-
-    </script>
+    <script src="debt.js"></script>
     </body>
     </html>
