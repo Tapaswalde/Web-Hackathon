@@ -104,9 +104,8 @@ article {
     font-size: 1.2rem;
     line-height: 1.6rem;
     background-image:url("farm\(6\).jpg") ;
-
-   
-    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   .articles {
