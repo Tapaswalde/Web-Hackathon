@@ -27,11 +27,12 @@ function calculate(amount,income,months){
             
         }
     else if(gtotal>pamount){
-        Total.innerHTML = "you may face debt";
+        document.getElementById("total").style.color = "red";
+        Total.innerHTML = "You may face debt";
     }
         else{
-           
-			Total.innerHTML = "you may not face debt";
+            document.getElementById("total").style.color = "green";
+			Total.innerHTML = "You may not face debt";
         }
     
 }
