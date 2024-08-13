@@ -271,7 +271,7 @@ article {
     margin:0% 1%;
     }
     
-    @media (max-width:720px){
+    @media (max-width:813px){
     .footer{
     text-align:left;
     padding:5%;
@@ -286,7 +286,7 @@ article {
     }
     }
 
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 813px) {
       .footer {
         height: 500px;
       }
